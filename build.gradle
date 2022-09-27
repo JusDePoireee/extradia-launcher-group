@@ -31,7 +31,7 @@ javafx {
 }
 
 application {
-    mainClassName = 'com.github.jusdepoireee.extradialaunchergroup.Main'
+    getMainClass().set('com.github.jusdepoireee.extradialaunchergroup.Main')
 }
 
 compileJava {
