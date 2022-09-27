@@ -31,9 +31,20 @@ javafx {
 }
 
 application {
-    mainClassName = 'com.github.jusdepoireee.extradia-launcher-group'
+    mainClassName = 'com.github.jusdepoireee.extradialaunchergroup.Main'
 }
 
-test {
-    useJUnitPlatform()
+compileJava {
+    options.encoding = "UTF-8"
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.github.jusdepoireee.extradialaunchergroup.Main'
+    }
+    from {
+        configurations.compileClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
 }
