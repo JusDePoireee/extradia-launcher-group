@@ -1,19 +1,21 @@
 package com.github.jusdepoireee.extradialaunchergroup;
 
+import javafx.application.Application;
+
 import javax.swing.*;
 
 public class Main {
-    public static <ClassNotFoundExeption> void main(String[] args) {
+    public static void main(String[] args) {
         try {
-            Class.forName("javafx.application.Application");
+            Class.forName("javafx.application.Applications");
             Application.launch(Launcher.class, args);
         } catch (ClassNotFoundException e) {
             JOptionPane.showMessageDialog(
                     null,
-                    "Erreur:/n" + e.getMessage() + " not found",
+                    "Erreur:\n" + e.getMessage() + " not found",
                     "Erreur",
                     JOptionPane.ERROR_MESSAGE
-            )
+            );
         }
     }
 }

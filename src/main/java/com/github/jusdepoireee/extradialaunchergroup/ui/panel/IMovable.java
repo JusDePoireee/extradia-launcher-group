@@ -2,7 +2,7 @@ package com.github.jusdepoireee.extradialaunchergroup.ui.panel;
 
 import org.w3c.dom.Node;
 
-public class IMovable {
+public interface IMovable {
     void setLeft(Node node);
     void setRight(Node node);
     void setTop(Node node);

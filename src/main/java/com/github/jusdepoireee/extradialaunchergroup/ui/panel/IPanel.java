@@ -1,7 +1,11 @@
 package com.github.jusdepoireee.extradialaunchergroup.ui.panel;
 
-import com.github.jusdepoireee.extradialaunchergroup.PanelManager;
+import com.github.jusdepoireee.extradialaunchergroup.ui.PanelManager;
+import javafx.scene.layout.GridPane;
 
-public class IPanel {
+public interface IPanel {
     void init(PanelManager panelManager);
+    GridPane getLayout();
+    void onShow();
+    String getName();
 }

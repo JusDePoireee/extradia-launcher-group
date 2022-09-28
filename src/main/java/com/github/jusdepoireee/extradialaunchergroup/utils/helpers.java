@@ -6,10 +6,9 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-
-public class Helpers {
-    public static File (String ) {
-        Path ;
+public class helpers {
+    public static File generateGamePath(String folderName) {
+        Path path;
         switch (Platform.getCurrentPlatform()) {
             case WINDOWS:
                 path = Paths.get(System.getenv("APPDATA"));
@@ -22,11 +21,9 @@ public class Helpers {
                 break;
             default:
                 path = Paths.get(System.getProperty("user.home"));
-
         }
 
         path = Paths.get(path.toString(), folderName);
         return path.toFile();
     }
-
 }
